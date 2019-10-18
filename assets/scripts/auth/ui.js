@@ -1,5 +1,7 @@
 'use strict'
 
+// AUTH UI
+
 const store = require('../store.js')
 
 const successMessage = function (newText) {
@@ -25,12 +27,12 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (responseData) {
-  successMessage('Welcome!')
+  successMessage('You\'re signed in!')
   store.user = responseData.user
-  $('.sign-up').hide()
-  $('.sign-in').hide()
-  $('.change-password').show()
-  $('.sign-out').show()
+  $('.main-header').text('Welcome Home!').css('font-size', '5em')
+  $('.form').hide()
+  $('nav').show()
+  $('.form2').show()
 }
 
 const onSignInFailure = function () {
@@ -49,10 +51,10 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   successMessage(`Signed out!`)
-  $('.sign-up').show()
-  $('.sign-in').show()
-  $('.change-password').hide()
-  $('.sign-out').hide()
+  $('.main-header').text('Animal Crossing Town Builder').css('font-size', '3em')
+  $('.form').show()
+  $('nav').hide()
+  $('.form2').hide()
 }
 
 const onSignOutFailure = function () {

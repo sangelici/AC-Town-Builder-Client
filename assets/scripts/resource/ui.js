@@ -1,0 +1,3 @@
+'use strict'
+
+// RESOURCE UI

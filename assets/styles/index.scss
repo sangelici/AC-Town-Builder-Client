@@ -1,38 +1,64 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-image: url(https://66.media.tumblr.com/86e2d554331ef99cd6e1076fbf3fc60b/tumblr_n5ftu0Zng51qm1yelo1_1280.png);
+  background-image: url("https://66.media.tumblr.com/86e2d554331ef99cd6e1076fbf3fc60b/tumblr_n5ftu0Zng51qm1yelo1_1280.png");
   background-size: 100% 100%;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
+div {
+  & .col-9 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+nav {
+  height: 50px;
+  flex-wrap: wrap-reverse;
 }
 
 .box1 {
-  background-color: pink;
-  border: 3px solid white;
-  height: 25vh;
+  background-color: rgb(255, 192, 203);
+  height: 20vh;;
+  margin-top: auto;
+  margin-bottom: auto;
   opacity: .8;
-  width: 600px;
 }
 
 .box2 {
-  background-color: pink;
-  height: 75vh;
-  opacity: 0.8;
+  background-color: rgb(255, 192, 203);
+  display: flex;
+  height: 80vh;
+  justify-content: center;
   width: 600px;
 }
 
 .form {
-  display: inline-flex;
-  background-image: url('images/speech-bubble.png');
-  height: 300px;
+  display: flex;
+  height: 225px;
+  justify-content: center;
+  margin: 40px;
+  padding: 15px;
+  width: 225px;
+}
+
+.main-header {
+  align-content: center;
+  display: flex;
+  font-size: 3em;
+  justify-content: center;
 }
 
 .row {
+  align-content: center;
   display: flex;
   justify-content: center;
+}
+
+#message {
+  font-size: 25px;
+  display: flex;
   align-content: center;
+  position: fixed;
+  width: auto;
 }
