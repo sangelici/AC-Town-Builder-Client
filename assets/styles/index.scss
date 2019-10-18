@@ -6,25 +6,33 @@ body {
 }
 
 h1 {
-
+  display: flex;
+  justify-content: center;
 }
 
 .box1 {
   background-color: pink;
-  opacity: 0.5;
+  border: 3px solid white;
   height: 25vh;
+  opacity: .8;
   width: 600px;
 }
 
 .box2 {
   background-color: pink;
-  opacity: 0.5;
   height: 75vh;
+  opacity: 0.8;
   width: 600px;
+}
+
+.form {
+  display: inline-flex;
+  background-image: url('images/speech-bubble.png');
+  height: 300px;
 }
 
 .row {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }

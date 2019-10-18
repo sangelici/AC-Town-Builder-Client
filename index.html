@@ -12,13 +12,42 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-        <div class="container">
-          <div class="row">
-            <div class="col-9 box1">
-              <h1>Animal Crossing Town Builder</h1>
-            </div>
-            <div class="col-9 box2"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-9 box1">
+            <h1>Animal Crossing Town Builder</h1>
           </div>
-        <div>
+          <div class="col-9 box2">
+<!-- INPUT FIELDS -->
+          <div class="form">
+            <div class="sign-up">
+              <h3>Sign Up!</h3>
+              <form id="sign-up">
+                <input type="email" name="credentials[email]" placeholder="Enter email...">
+                <br>
+                <input type="password" name="credentials[password]" placeholder="Enter password...">
+                <br>
+                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password...">
+                <br>
+                <button>Sign Up</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="form">
+            <div class="sign-in">
+              <h3>Sign-In!</h3>
+              <form id="sign-in">
+                <input type="email" name="credentials[email]" placeholder="Enter email...">
+                <br>
+                <input type="password" name="credentials[password]" placeholder="Enter password...">
+                <br>
+                <button>Sign In</button>
+              </form>
+            </div>
+          </div>
+          </div>
+         </div>
+        </div>
     </body>
 </html>
