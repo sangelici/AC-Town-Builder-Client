@@ -32,7 +32,7 @@ const onSignInSuccess = function (responseData) {
   $('.main-header').text('Welcome Home!').css('font-size', '5em')
   $('.form').hide()
   $('nav').show()
-  $('.form2').show()
+  $('.resources-navigation').show()
 }
 
 const onSignInFailure = function () {
