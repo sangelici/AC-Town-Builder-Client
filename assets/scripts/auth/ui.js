@@ -27,7 +27,7 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (responseData) {
-  successMessage('You\'re signed in!')
+  successMessage(`You're signed in!`)
   store.user = responseData.user
   $('.main-header').text('Welcome Home!').css('font-size', '5em')
   $('.form').hide()
@@ -45,7 +45,7 @@ const onChangePasswordSuccess = function () {
 }
 
 const onChangePasswordFailure = function () {
-  failureMessage(`Entry failed, PLease try again!`)
+  failureMessage(`Entry failed, Please try again!`)
   $('#message').show()
 }
 
@@ -54,7 +54,7 @@ const onSignOutSuccess = function () {
   $('.main-header').text('Animal Crossing Town Builder').css('font-size', '3em')
   $('.form').show()
   $('nav').hide()
-  $('.form2').hide()
+  $('.resources-navigation').hide()
 }
 
 const onSignOutFailure = function () {
