@@ -1,117 +1,146 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
 
-    <body>
-      <div class="container">
-        <div class="row">
-          <div class="col-9 box1">
-            <h1 class="main-header">Animal Crossing Town Builder</h1>
-          </div>
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-          <div class="col-9">
-<!-- Navigation Bar -->
-            <nav class="navbar navbar-light bg-light">
-<!-- Change Password Modal -->
-              <div class="modal-toggle" data-title="changePassword" >
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cPassword">
-                Change Password
-                </button>
-              </div>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-9 box1">
+        <h1 class="main-header">Animal Crossing Town Builder</h1>
+      </div>
 
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="cPassword">Change Password</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="change-password">
-                          <form id="change-password">
-                            <h6>Enter Old Password:</h6>
-                            <input type="password" name="passwords[old]" placeholder="Enter old password...">
-                            <br>
-                            <br>
-                            <h6>Enter New Password:</h6>
-                            <input type="password" name="passwords[new]" placeholder="Enter new password...">
-                            <br>
-                            <br>
-                            <button>Submit</button>
-                          </form>
-                        </div>
-                    </div>
+      <div class="col-9">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-light bg-light">
+          <!-- Change Password Modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Change Password
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Update Your Password!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="change-password">
+                    <form id="change-password">
+                      <h6>Enter Old Password:</h6>
+                      <input type="password" name="passwords[old]" placeholder="Enter old password...">
+                      <br>
+                      <br>
+                      <h6>Enter New Password:</h6>
+                      <input type="password" name="passwords[new]" placeholder="Enter new password...">
+                      <br>
+                      <br>
+                      <button>Submit</button>
+                    </form>
                   </div>
                 </div>
               </div>
-
-              <div class="sign-out">
-                <form id="sign-out">
-                  <button class="btn btn-primary">Sign Out</button>
-                </form>
-              </div>
-
-            </nav>
-          </div>
-
-<!-- Main Box -->
-          <div class="col-9 box2">
-
-<!-- Sign-Up/Sign-in Input Fields -->
-          <h4 id="message"></h4>
-          <div class="form">
-            <div class="sign-up">
-              <h3>Sign Up!</h3>
-              <form id="sign-up">
-                <input type="email" name="credentials[email]" placeholder="Enter email...">
-                <br>
-                <input type="password" name="credentials[password]" placeholder="Enter password...">
-                <br>
-                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password...">
-                <br>
-                <button>Sign Up</button>
-              </form>
             </div>
           </div>
 
-          <div class="form">
-            <div class="sign-in">
-              <h3>Sign-In!</h3>
-              <form id="sign-in">
-                <input type="email" name="credentials[email]" placeholder="Enter email...">
-                <br>
-                <input type="password" name="credentials[password]" placeholder="Enter password...">
-                <br>
-                <button>Sign In</button>
-              </form>
-            </div>
+          <div class="sign-out">
+            <form id="sign-out">
+              <button class="btn btn-primary">Sign Out</button>
+            </form>
           </div>
+        </nav>
+      </div>
 
-<!-- Resources -->
-<!-- Create/View Town/Residents -->
-          <div class="resources-navigation">
+      <!-- Main Box -->
+      <div class="col-9 box2">
 
-<!-- Create Town -->
-            <button>Create Town</button>
-
-<!-- Create Residents -->
-            <button>Create Residents</button>
-
-<!-- View Towns -->
-            <button>View Towns</button>
-          </div>
-
-          </div>
-
+        <!-- Sign-Up/Sign-in Input Fields -->
+        <h4 id="message"></h4>
+        <div class="form">
+          <div class="sign-up">
+            <h3>Sign Up!</h3>
+            <form id="sign-up">
+              <input type="email" name="credentials[email]" placeholder="Enter email...">
+              <br>
+              <input type="password" name="credentials[password]" placeholder="Enter password...">
+              <br>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password...">
+              <br>
+              <button>Sign Up</button>
+            </form>
           </div>
         </div>
+
+        <div class="form">
+          <div class="sign-in">
+            <h3>Sign-In!</h3>
+            <form id="sign-in">
+              <input type="email" name="credentials[email]" placeholder="Enter email...">
+              <input type="password" name="credentials[password]" placeholder="Enter password...">
+              <button>Sign In</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <!-- Create/View Town/Residents -->
+        <div class="resources-navigation">
+
+          <!-- Create Town -->
+          <div class="create-town-form">
+            <h3>Build Your Town:</h3>
+            <form id="create-town">
+              <input type="text" name="town[name]" placeholder="Enter town name...">
+              <input type="text" name="town[town_fruit]" placeholder="Enter town fruit...">
+              <input type="text" name="town[mayor]" placeholder="Enter town mayor...">
+              <button>Create</button>
+            </form>
+            <button id="create-town-btn">Create Town</button>
+          </div>
+
+          <!-- Create Residents -->
+          <div class="create-res-form">
+            <h3>Create a Resident:</h3>
+            <form id="create-res">
+              <input type="text" name="resident[name]" placeholder="Enter name...">
+              <input type="text" name="resident[animal_type]" placeholder="Enter animal type...">
+              <input type="date" name="resident[birthday]" placeholder="Enter birthday...">
+              <input type="text" name="resident[hobby]" placeholder="Enter hobby...">
+              <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                  <option selected>Choose Town...</option>
+                  <option value="1">Town 1</option>
+                  <option value="2">Town 2</option>
+                  <option value="3">Town 3</option>
+                </select>
+                <div class="input-group-append">
+                  <button>Create</button>
+                </div>
+              </div>
+            </form>
+            <button id="create-res-btn">Create Residents</button>
+          </div>
+
+          <!-- View Towns -->
+          <div class="get-towns">
+            <button id="view-town-btn">View Town</button>
+          </div>
+
+        </div>
       </div>
-    </body>
+    </div>
+  </div>
+</body>
+
 </html>

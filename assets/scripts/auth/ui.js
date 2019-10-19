@@ -50,7 +50,7 @@ const onChangePasswordFailure = function () {
 }
 
 const onSignOutSuccess = function () {
-  successMessage(`Signed out!`)
+  successMessage(`Goodbye! Come back soon!`)
   $('.main-header').text('Animal Crossing Town Builder').css('font-size', '3em')
   $('.form').show()
   $('nav').hide()

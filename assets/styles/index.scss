@@ -60,9 +60,10 @@ nav {
 }
 
 #message {
-  font-size: 25px;
   display: flex;
-  align-content: center;
-  position: fixed;
+  font-size: 25px;
+  justify-content: center;
+  margin-top: 20px;
+  position: absolute;
   width: auto;
 }
