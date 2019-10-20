@@ -2,7 +2,7 @@
 
 // RESOURCE UI
 
-// const store = require('../store.js')
+const store = require('../store.js')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
@@ -20,26 +20,38 @@ const failureMessage = function (newText) {
 // TOWNS
 const onCreateTownSuccess = function () {
   successMessage(`You're town has been created!`)
-  $('#create-town').hide()
+  $('.create-town-form').hide()
+  $('#create-town-btn').show()
+  $('#view-town-btn').show()
 }
 
 const onCreateTownFailure = function () {
   failureMessage(`Please try again!`)
 }
 
-// RESIDENTS
-const onCreateResidentSuccess = function () {
-  successMessage(`You're resident has moved in!`)
-  $('#create-res').hide()
+const onIndexTownSuccess = function (responseData) {
+  successMessage(`Your Town List`)
+  store.town = responseData.town
 }
 
-const onCreateResidentFailure = function () {
+const onIndexTownFailure = function () {
   failureMessage(`Please try again!`)
 }
+// RESIDENTS
+// const onCreateResidentSuccess = function () {
+//   successMessage(`You're resident has moved in!`)
+//   $('#create-res').hide()
+// }
+//
+// const onCreateResidentFailure = function () {
+//   failureMessage(`Please try again!`)
+// }
 
 module.exports = {
   onCreateTownSuccess,
   onCreateTownFailure,
-  onCreateResidentSuccess,
-  onCreateResidentFailure
+  onIndexTownSuccess,
+  onIndexTownFailure
+//   onCreateResidentSuccess,
+//   onCreateResidentFailure
 }

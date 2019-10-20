@@ -12,6 +12,9 @@ $(() => {
   $('nav').hide()
   // RESOURCE jQuery
   $('.resources-navigation').hide()
+  $('.create-town-form').hide()
+  $('#create-town-btn').on('click', resourceEvents.onCreateTownForm)
   $('#create-town').on('submit', resourceEvents.onCreateTown)
-  $('#create-res').on('submit', resourceEvents.onCreateResident)
+  $('#view-town-btn').on('click', resourceEvents.onIndexTowns)
+  // $('#create-res').on('submit', resourceEvents.onCreateResident)
 })

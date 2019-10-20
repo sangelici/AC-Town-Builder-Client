@@ -17,19 +17,29 @@ const createTown = function (formData) {
   })
 }
 
-// RESIDENTS
-const createResident = function (formData) {
+const indexTowns = function () {
   return $.ajax({
-    method: 'POST',
-    url: config.apiUrl + '/residents',
+    url: config.apiUrl + '/towns',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: formData
+    }
   })
 }
 
+// RESIDENTS
+// const createResident = function (formData) {
+//   return $.ajax({
+//     method: 'POST',
+//     url: config.apiUrl + '/residents',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: formData
+//   })
+// }
+
 module.exports = {
   createTown,
-  createResident
+  indexTowns
+  // createResident
 }
