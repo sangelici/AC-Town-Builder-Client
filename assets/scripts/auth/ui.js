@@ -19,7 +19,6 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage(`You're ready to move in!`)
-  $('.sign-up').hide()
 }
 
 const onSignUpFailure = function () {
@@ -29,7 +28,8 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage(`You're signed in!`)
   store.user = responseData.user
-  $('.main-header').text('Welcome Home!').css('font-size', '5em')
+  $('.main-header').text('Welcome Home!').css('font-size', '4.5em')
+  $('.box2').css('height', '64vh')
   $('.form').hide()
   $('nav').show()
   $('.resources-navigation').show()

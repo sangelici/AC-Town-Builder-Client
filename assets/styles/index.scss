@@ -1,45 +1,80 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Gorditas&display=swap');
 
 body {
-  background-image: url("https://66.media.tumblr.com/86e2d554331ef99cd6e1076fbf3fc60b/tumblr_n5ftu0Zng51qm1yelo1_1280.png");
-  background-size: 100% 100%;
+  background-image: url(https://wallpaperplay.com/walls/full/d/d/c/151859.jpg);
+  background-size: 50% 50%;
+  border: 20px solid #ffffe0;
+  border-radius: 5%;
+  overflow: hidden;
 }
 
 div {
-  & .col-9 {
+  & .col-8 {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
+h1 {
+  display: flex;
+  font-family: 'Gorditas', cursive;
+  justify-content: center;
+  margin: 20px auto;
+  text-align: center;
+}
+
 nav {
-  height: 50px;
   flex-wrap: wrap-reverse;
+  height: 50px;
 }
 
 .box1 {
-  background-color: rgb(255, 192, 203);
-  height: 20vh;;
-  margin-top: auto;
+  background-color: #fff7e0;
+  border: 10px solid #ffee97;
+  border-bottom: 0;
+  border-radius: 25px 25px 0 0;
+  height: 20vh;
   margin-bottom: auto;
-  opacity: .8;
+  margin-top: 20px;
 }
 
 .box2 {
-  background-color: rgb(255, 192, 203);
+  align-content: center;
+  align-items: center;
+  background-color: #fff7e0;
+  border: 10px solid #ffee97;
+  border-radius: 0 0 25px 25px;
   display: flex;
-  height: 80vh;
+  flex-direction: column;
+  height: 70vh;
   justify-content: center;
+  margin-bottom: 20px;
+  opacity: .888;
   width: 600px;
+
+  & #message {
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    margin: 10px auto;
+    width: auto;
+  }
+}
+
+.btn-primary {
+  height: 35px;
 }
 
 .form {
-  display: flex;
   height: 225px;
-  justify-content: center;
-  margin: 40px;
+  margin: 25px;
   padding: 15px;
   width: 225px;
+
+  & .sign-in {
+    margin-top: -20px;
+  }
 }
 
 .main-header {
@@ -57,13 +92,4 @@ nav {
   align-content: center;
   display: flex;
   justify-content: center;
-}
-
-#message {
-  display: flex;
-  font-size: 25px;
-  justify-content: center;
-  margin-top: 20px;
-  position: absolute;
-  width: auto;
 }

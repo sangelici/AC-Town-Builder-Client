@@ -19,6 +19,7 @@ const createTown = function (formData) {
 
 const indexTowns = function () {
   return $.ajax({
+    method: 'GET',
     url: config.apiUrl + '/towns',
     headers: {
       Authorization: 'Token token=' + store.user.token

@@ -32,6 +32,7 @@ const onCreateTownFailure = function () {
 const onIndexTownSuccess = function (responseData) {
   successMessage(`Your Town List`)
   store.town = responseData.town
+  console.log(store.town)
 }
 
 const onIndexTownFailure = function () {
