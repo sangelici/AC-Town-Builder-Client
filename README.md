@@ -33,7 +33,7 @@ This project for me was not as difficult as the first one (Tic-Tac-Toe), and wit
   3. As the user, I want to be able to select and delete resident
   4. As the user, I want to press a button and view the towns and residents that I have created
 
-Note: I did not reach the point of implementing the front-end functionality for my Residents resource, but it will be something I would like to incorporate in the future!
+Note: I did not reach the point of implementing the front-end functionality for my Residents resource, but it will be something I would like to incorporate in the future! All CRUD actions have been applied to the towns resourcexs
 
 # Technologies Used
 
