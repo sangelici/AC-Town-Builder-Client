@@ -12,9 +12,19 @@
 </head>
 
 <body>
-  <!-- <img src="background.jpg" id="background"/> -->
-  <img src="tom-nook.png" id="tom-nook"/>
+  <!-- IMAGES -->
+  <img src="boy-villager.png" id="boy-villager"/>
+  <img src="tree.png" id="tree"/>
+  <img src="girl-villager.png" id="girl-villager"/>
+  <img src="kk-slider.png" id="kk-slider"/>
   <img src="rosie.png" id="rosie"/>
+  <img src="tom-nook.png" id="tom-nook"/>
+  <img src="balloon.png" id="balloon"/>
+  <img src="gyroid.png" id="gyroid"/>
+  <img src="kicks.png" id="kicks"/>
+
+
+  <!-- BOOTSTRAPS -->
   <div class="container">
     <div class="row">
       <div class="col-8 box1">
@@ -23,7 +33,7 @@
 
       <div class="col-8">
         <!-- Navigation Bar -->
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar">
 
           <!-- Create Town Modal -->
           <button type="button" class="cute-btn" data-toggle="modal" data-target="#create-a-town">
@@ -40,7 +50,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <div class="create-town-form">
+                  <div class="create">
+                    <h4 id="message2"></h4>
                     <form id="create-town">
                       <input type="text" name="town[name]" placeholder="Enter town name...">
                       <br>
@@ -75,7 +86,7 @@
                   <form id="show-one-town">
                     <h6>Search for a town</h6>
                     <input class="input" type="text" name="townId" placeholder="Enter town Id...">
-                    <button class="cute-btn inner-modal-btn">Search</button>
+                    <button class="cute-btn inner-modal-btn search">SEARCH</button>
                   </form>
                   <div class="show-single-town">
                   </div>

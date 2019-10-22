@@ -22,5 +22,12 @@ $(() => {
   $('#delete-town').on('submit', resourceEvents.onDeleteTown)
   // EXTRAS
   $('#rosie').hide()
+  $('#kicks').hide()
+  $('#kk-slider').hide()
+  $('#boy-villager').hide()
+  $('#girl-villager').hide()
+  $('#tree').hide()
+  $('#balloon').hide()
+
   // $('#create-res').on('submit', resourceEvents.onCreateResident)
 })

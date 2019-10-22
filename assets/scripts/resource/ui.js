@@ -22,6 +22,7 @@ const failureMessage = function (newText) {
 // TOWNS
 const onCreateTownSuccess = function () {
   successMessage(`You're town has been created!`)
+  $('#create-town').trigger('reset')
 }
 
 const onCreateTownFailure = function () {
@@ -31,6 +32,9 @@ const onCreateTownFailure = function () {
 const onIndexTownSuccess = function (townData) {
   $('.show-all-towns').html(``)
   $('.show-all-towns').append(allTownsHandlebar({towns: townData.towns}))
+  $('#message2').hide()
+  $('.update').hide()
+  $('.delete').hide()
 }
 
 const onIndexTownFailure = function () {
@@ -44,6 +48,7 @@ const onShowTownSuccess = function (townData) {
   $('.show-all-towns').hide()
   $('.update').show()
   $('.delete').show()
+  $('#show-one-town').trigger('reset')
   // console.log(store)
 }
 
@@ -53,8 +58,10 @@ const onShowTownFailure = function (townData) {
 }
 
 const onUpdateTownSuccess = function (townData) {
+  $('#message2').show()
   successMessage('Updated!')
   onShowTownSuccess(townData)
+  $('#update-town').trigger('reset')
 }
 
 const onUpdateTownFailure = function (townData) {
@@ -62,7 +69,9 @@ const onUpdateTownFailure = function (townData) {
 }
 
 const onDeleteTownSuccess = function (townData) {
+  $('#message2').show()
   successMessage(`Your Town is gone :(`)
+  $('#delete-town').trigger('reset')
 }
 
 const onDeleteTownFailure = function (townData) {
