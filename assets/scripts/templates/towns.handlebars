@@ -1,0 +1,17 @@
+{{#each  towns as |town|}}
+  {{log town}}
+  <section data-id="{{town.id}}">
+    <h3>
+      {{town.name}}
+    </h3>
+    <p>
+      <h6>Town Fruit:</h6>
+      {{town.town_fruit}}
+    </p>
+    <p>
+    <h6>Mayor:</h6>
+    {{town.mayor}}
+    </p>
+  </section>
+  <hr>
+{{/each}}

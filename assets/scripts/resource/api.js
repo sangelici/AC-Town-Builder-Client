@@ -27,6 +27,57 @@ const indexTowns = function () {
   })
 }
 
+const showTown = function (townId) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/towns/' + townId,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateTown = function (id, name, fruit, mayor) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/towns/` + id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'town': {
+        'id': id,
+        'name': name,
+        'town_fruit': fruit,
+        'mayor': mayor
+      }
+    }
+  })
+}
+
+// const destroy = function (id) {
+//   console.log(id)
+//   return $.ajax({
+//     method: 'DELETE',
+//     url: config.apiUrl + `/towns/${id}`,
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
+
+const deleteTown = (formData) => {
+  console.log(formData)
+  return $.ajax({
+    url: config.apiUrl + `/towns/${formData}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: formData
+  })
+}
+
 // RESIDENTS
 // const createResident = function (formData) {
 //   return $.ajax({
@@ -41,6 +92,9 @@ const indexTowns = function () {
 
 module.exports = {
   createTown,
-  indexTowns
+  indexTowns,
+  showTown,
+  updateTown,
+  deleteTown
   // createResident
 }

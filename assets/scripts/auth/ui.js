@@ -33,6 +33,8 @@ const onSignInSuccess = function (responseData) {
   $('.form').hide()
   $('nav').show()
   $('.resources-navigation').show()
+  $('#tom-nook').hide()
+  $('#rosie').show()
 }
 
 const onSignInFailure = function () {

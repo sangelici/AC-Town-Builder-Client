@@ -12,9 +12,13 @@ $(() => {
   $('nav').hide()
   // RESOURCE jQuery
   $('.resources-navigation').hide()
-  $('.create-town-form').hide()
-  $('#create-town-btn').on('click', resourceEvents.onCreateTownForm)
+  $('#back').on('click', resourceEvents.onMainPage)
   $('#create-town').on('submit', resourceEvents.onCreateTown)
-  $('#view-town-btn').on('click', resourceEvents.onIndexTowns)
+  $('#index-towns').on('click', resourceEvents.onIndexTowns)
+  $('#show-one-town').on('submit', resourceEvents.onShowTown)
+  $('#update-town').on('submit', resourceEvents.onUpdateTown)
+  $('#delete-town').on('submit', resourceEvents.onDeleteTown)
+  // EXTRAS
+  $('#rosie').hide()
   // $('#create-res').on('submit', resourceEvents.onCreateResident)
 })

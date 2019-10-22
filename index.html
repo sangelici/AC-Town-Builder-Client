@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <!-- <img src="background.jpg" id="background"/> -->
+  <img src="tom-nook.png" id="tom-nook"/>
+  <img src="rosie.png" id="rosie"/>
   <div class="container">
     <div class="row">
       <div class="col-8 box1">
@@ -21,12 +24,89 @@
       <div class="col-8">
         <!-- Navigation Bar -->
         <nav class="navbar navbar-light bg-light">
+
+          <!-- Create Town Modal -->
+          <button type="button" class="cute-btn" data-toggle="modal" data-target="#create-a-town">
+            Create Town
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="create-a-town" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Build A Town!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="create-town-form">
+                    <form id="create-town">
+                      <input type="text" name="town[name]" placeholder="Enter town name...">
+                      <br>
+                      <input type="text" name="town[town_fruit]" placeholder="Enter town fruit...">
+                      <br>
+                      <input type="text" name="town[mayor]" placeholder="Enter town mayor...">
+                      <br>
+                      <button>Create</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show Towns Modal -->
+          <button type="button" class="cute-btn" data-toggle="modal" data-target="#show-towns" id="index-towns">
+            View Towns
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="show-towns" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Your Towns!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <!-- Show / Delete Town -->
+                  <form id="show-one-town">
+                    <h5>Search for a town</h5>
+                    <input type="text" name="townId" placeholder="Enter town Id...">
+                    <button>Search</button>
+                  </form>
+                  <div class="show-single-town"></div>
+                  <br>
+                  <!-- Update Town -->
+                  <form id="update-town">
+                    <h6>Make a change?</h6>
+                    <input class="town-id" type="text" name="town[id]" placeholder="Enter Town Id...">
+                    <input id="town-name" type="text" name="town[name]" placeholder="New Name..."/>
+                    <input id="town-fruit" type="text" name="town[town_fruit]" placeholder="New Fruit..."/>
+                    <input id="town-mayor" type="text" name="town[mayor]" placeholder="New Mayor..."/>
+                    <button type="submit" class="btn btn-danger" data-id="{{town.id}}">Edit</button>
+                  </form>
+                  <!-- Delete Town -->
+                  <form id="delete-town">
+                    <input id="delete" type="number" name="town[id]" placeholder="Confirm Town Id...">
+                    <input class="btn btn-danger" type="submit" value="Delete Town" />
+                    <!-- <button type="submit" class="btn btn-danger" data-id="{{town.id}}">Delete Town :(</button> -->
+                  </form>
+                  <!-- Show all Towns -->
+                  <div class="show-all-towns overflow-auto"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Change Password Modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          <button type="button" class="cute-btn" data-toggle="modal" data-target="#change-password">
             Change Password
           </button>
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -56,7 +136,7 @@
 
           <div class="sign-out">
             <form id="sign-out">
-              <button class="btn btn-primary">Sign Out</button>
+              <button class="cute-btn">Sign Out</button>
             </form>
           </div>
         </nav>
@@ -77,7 +157,7 @@
               <br>
               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password...">
               <br>
-              <button>Sign Up</button>
+              <button class="cute-btn sign">Sign Up</button>
             </form>
           </div>
         </div>
@@ -88,27 +168,13 @@
             <form id="sign-in">
               <input type="email" name="credentials[email]" placeholder="Enter email...">
               <input type="password" name="credentials[password]" placeholder="Enter password...">
-              <button>Sign In</button>
+              <button class="cute-btn sign">Sign In</button>
             </form>
           </div>
         </div>
 
         <!-- Resources -->
         <!-- Create/View Town/Residents -->
-        <div class="resources-navigation">
-
-          <!-- Create Town -->
-          <div class="create-town-form">
-            <h3>Build Your Town:</h3>
-            <form id="create-town">
-              <input type="text" name="town[name]" placeholder="Enter town name...">
-              <input type="text" name="town[town_fruit]" placeholder="Enter town fruit...">
-              <input type="text" name="town[mayor]" placeholder="Enter town mayor...">
-              <button>Create</button>
-            </form>
-          </div>
-          <button id="create-town-btn">Create Town</button>
-
           <!-- Create Residents -->
           <!-- <div class="create-res-form">
             <h3>Create a Resident:</h3>
@@ -131,13 +197,7 @@
             </form>
             <button id="create-res-btn">Create Residents</button>
           </div> -->
-
-          <!-- View Towns -->
-          <div class="get-towns">
-            <button id="view-town-btn">View Town</button>
-          </div>
-
-        </div>
+          <!-- <button id="back">Back</button> -->
       </div>
     </div>
   </div>

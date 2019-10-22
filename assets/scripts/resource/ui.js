@@ -2,7 +2,9 @@
 
 // RESOURCE UI
 
-const store = require('../store.js')
+// const store = require('../store.js')
+const townHandlebar = require('../templates/towns.handlebars')
+const allTownsHandlebar = require('../templates/all-towns.handlebars')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
@@ -20,24 +22,51 @@ const failureMessage = function (newText) {
 // TOWNS
 const onCreateTownSuccess = function () {
   successMessage(`You're town has been created!`)
-  $('.create-town-form').hide()
-  $('#create-town-btn').show()
-  $('#view-town-btn').show()
 }
 
 const onCreateTownFailure = function () {
   failureMessage(`Please try again!`)
 }
 
-const onIndexTownSuccess = function (responseData) {
-  successMessage(`Your Town List`)
-  store.town = responseData.town
-  console.log(store.town)
+const onIndexTownSuccess = function (townData) {
+  $('.show-all-towns').html(``)
+  $('.show-all-towns').append(allTownsHandlebar({towns: townData.towns}))
 }
 
 const onIndexTownFailure = function () {
   failureMessage(`Please try again!`)
 }
+
+const onShowTownSuccess = function (townData) {
+  // console.log(townData)
+  $('.show-single-town').html(``)
+  $('.show-single-town').append(townHandlebar({towns: townData}))
+  $('.show-all-towns').hide()
+  // console.log(store)
+}
+
+const onShowTownFailure = function (townData) {
+  // console.log(townData)
+  failureMessage(`That town doesn't exist! Please Try again!`)
+}
+
+const onUpdateTownSuccess = function (townData) {
+  successMessage('Updated!')
+  onShowTownSuccess(townData)
+}
+
+const onUpdateTownFailure = function (townData) {
+  successMessage(`Please try again!`)
+}
+
+const onDeleteTownSuccess = function (townData) {
+  successMessage(`Your Town is gone :(`)
+}
+
+const onDeleteTownFailure = function (townData) {
+  successMessage(`Please try again!`)
+}
+
 // RESIDENTS
 // const onCreateResidentSuccess = function () {
 //   successMessage(`You're resident has moved in!`)
@@ -52,7 +81,13 @@ module.exports = {
   onCreateTownSuccess,
   onCreateTownFailure,
   onIndexTownSuccess,
-  onIndexTownFailure
-//   onCreateResidentSuccess,
-//   onCreateResidentFailure
+  onIndexTownFailure,
+  onShowTownSuccess,
+  onShowTownFailure,
+  onUpdateTownSuccess,
+  onUpdateTownFailure,
+  onDeleteTownSuccess,
+  onDeleteTownFailure
+// onCreateResidentSuccess,
+// onCreateResidentFailure
 }
