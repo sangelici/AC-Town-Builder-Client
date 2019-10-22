@@ -7,16 +7,16 @@ const townHandlebar = require('../templates/towns.handlebars')
 const allTownsHandlebar = require('../templates/all-towns.handlebars')
 
 const successMessage = function (newText) {
-  $('#message2').text(newText)
-  $('#message2').removeClass('failure')
-  $('#message2').addClass('success')
+  $('.message2').text(newText)
+  $('.message2').removeClass('failure')
+  $('.message2').addClass('success')
   $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
-  $('#message2').text(newText)
-  $('#message2').removeClass('success')
-  $('#message2').addClass('failure')
+  $('.message2').text(newText)
+  $('.message2').removeClass('success')
+  $('.message2').addClass('failure')
 }
 
 // TOWNS
@@ -32,7 +32,6 @@ const onCreateTownFailure = function () {
 const onIndexTownSuccess = function (townData) {
   $('.show-all-towns').html(``)
   $('.show-all-towns').append(allTownsHandlebar({towns: townData.towns}))
-  $('#message2').hide()
   $('.update').hide()
   $('.delete').hide()
 }
@@ -58,7 +57,7 @@ const onShowTownFailure = function (townData) {
 }
 
 const onUpdateTownSuccess = function (townData) {
-  $('#message2').show()
+  $('.message2').show()
   successMessage('Updated!')
   onShowTownSuccess(townData)
   $('#update-town').trigger('reset')
@@ -69,7 +68,7 @@ const onUpdateTownFailure = function (townData) {
 }
 
 const onDeleteTownSuccess = function (townData) {
-  $('#message2').show()
+  $('.message2').show()
   successMessage(`Your Town is gone :(`)
   $('#delete-town').trigger('reset')
 }

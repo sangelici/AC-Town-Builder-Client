@@ -37,6 +37,7 @@ const onSignInSuccess = function (responseData) {
   $('#girl-villager').hide()
   $('#tree').hide()
   $('#balloon').hide()
+  $('.signature').hide()
   cssSecondPage()
 }
 
@@ -64,6 +65,7 @@ const onSignOutSuccess = function () {
   $('#girl-villager').show()
   $('#tree').show()
   $('#balloon').show()
+  $('.signature').show()
   cssFirstPage()
 }
 
@@ -91,7 +93,6 @@ const cssSecondPage = function () {
   $('.box2').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
   $('.cute-btn').css('background-color', '#9cf0cc').css('box-shadow', '0px 6px 0px #64b399')
 }
-
 
 // Polka dot background
 // .css('background-image', 'radial-gradient(#bcaed9 20%, transparent 0),radial-gradient(#bcaed9 20%, transparent 0)').css('background-size', '30px 30px').css('background-position', '0 0, 15px 15px')
