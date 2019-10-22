@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700&display=swap');
 
 body {
-  background-size: 50% 50%;
-  overflow: hidden;
   background: url(background.jpg);
+  background-size: 50% 50%;
   border: 20px solid #ffffe0;
   border-radius: 5%;
   height: 100%;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -17,7 +17,6 @@ div {
     padding-left: 0;
     padding-right: 0;
     position: relative;
-
   }
 }
 
@@ -34,9 +33,16 @@ html {
   width: 100%;
 }
 
+
+
 nav {
   flex-wrap: wrap-reverse;
   height: 60px;
+}
+
+section{
+  line-height: 1;
+  display: inherit;
 }
 
 .box1 {
@@ -76,20 +82,48 @@ nav {
   height: 35px;
 }
 
+.cute-btn {
+  background-color: #fff7e0;
+  border-radius: 16px;
+  box-shadow: 0px 6px 0px #e8cea2;
+  // color: #111; FONT
+  padding: 9px 9px;
+  float: right;
+  font-size: 15px;
+  margin-top: 2px;
+  text-align: center;
+
+  &:hover {
+    background-color: #FCD7D2;
+    box-shadow: 0px 6px 0px #bcb6fc;
+  }
+
+  &.inner-modal-btn{
+  }
+
+  &.sign {
+    margin-top: 6px;
+  }
+}
+
 .form {
   background-color: #e2f0ea;
-  border: 8px solid #b2d4cc;
-  border-radius: 10%;
   background-image:
   radial-gradient(#c5e0d7 20%, transparent 0),
   radial-gradient(#c5e0d7 20%, transparent 0);
-  background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
+  background-size: 30px 30px;
+  border: 8px solid #b2d4cc;
+  border-radius: 10%;
   box-shadow: 5px 5px 5px grey;
   height: 225px;
   margin: 10px;
   padding: 20px;
   width: 250px;
+}
+
+.input {
+  font-size: 12px;
 }
 
 .main-header {
@@ -99,30 +133,25 @@ nav {
   justify-content: center;
 }
 
-.cute-btn {
-  float: right;
-  text-align: center;
-  background-color: #fff7e0;
-  // color: #111; FONT
-  padding: 9px 9px;
-  text-align: center;
-  font-size: 15px;
-  border-radius: 16px;
-  box-shadow: 0px 6px 0px #e8cea2;
-  margin-top: 2px;
-
-  &.sign {
-    margin-top: 6px;
-  }
+.modal-content {
+  align-items: center;
+  background-color: rgba(255, 204, 190, .88);
+  background-image:
+  radial-gradient(#ffccbe 20%, transparent 0),
+  radial-gradient(#ffccbe 20%, transparent 0);
+  background-position: 0 0, 15px 15px;
+  background-size: 30px 30px;
+  border: 10px solid #ffbba6;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
 }
 
-.cute-btn:hover {
-    background-color: #FCD7D2;
-    box-shadow: 0px 6px 0px #bcb6fc;
-}
-
-.resources-navigation {
-  margin-top: 40px;
+#message2 {
+  font-size: 10px;
+  justify-content: center;
+  margin: 10px auto;
+  width: auto;
 }
 
 .row {
@@ -132,28 +161,22 @@ nav {
 }
 
 .show-all-towns {
-  height: 50vh;
-}
-
-#background {
-  border: 20px solid #ffffe0;
-  border-radius: 5%;
-  position: absolute;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+  align-items: center;
+  display: block;
+  height: 45vh;
+  justify-content: center;
 }
 
 #rosie {
-  position: absolute;
   height: 50%;
-  margin-top: 24.5%;
   margin-left: 75%;
+  margin-top: 24.5%;
+  position: absolute;
 }
 
 #tom-nook {
-  position: absolute;
   height: 50%;
-  margin-top: 25%;
   margin-left: 5%;
+  margin-top: 25%;
+  position: absolute;
 }

@@ -51,12 +51,12 @@ const onUpdateTown = function (event) {
 }
 
 const onDeleteTown = event => {
-  console.log('hello')
+  // console.log('hello')
   event.preventDefault()
   // const form = event.target
   // const formData = getFormFields(form)
   const id = $('#delete').val()
-  console.log(id)
+  // console.log(id)
   api.deleteTown(id)
     .then(ui.onDeleteTownSuccess)
     .catch(ui.onDeleteTownFailure)

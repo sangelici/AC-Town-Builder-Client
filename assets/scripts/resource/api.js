@@ -55,19 +55,7 @@ const updateTown = function (id, name, fruit, mayor) {
   })
 }
 
-// const destroy = function (id) {
-//   console.log(id)
-//   return $.ajax({
-//     method: 'DELETE',
-//     url: config.apiUrl + `/towns/${id}`,
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-
 const deleteTown = (formData) => {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + `/towns/${formData}`,
     method: 'DELETE',

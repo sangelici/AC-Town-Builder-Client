@@ -1,19 +1,11 @@
 {{#each  towns as |town|}}
   {{log town}}
   <section data-id="{{town.id}}">
-    <p>
-      #{{town.id}}:
-    </p>
-    <h6>Town Name:</h6>
-      {{town.name}}
-    <p>
-      <h6>Town Fruit:</h6>
-      {{town.town_fruit}}
-    </p>
-    <p>
-    <h6>Mayor:</h6>
-    {{town.mayor}}
-    </p>
+    <hr>
+    <h5>Id: {{town.id}}</h5>
+    <p>Town Name: {{town.name}}</p>
+    <p>Town Fruit: {{town.town_fruit}}</p>
+    <p>Mayor: {{town.mayor}}</p>
   </section>
   <br>
   <hr>

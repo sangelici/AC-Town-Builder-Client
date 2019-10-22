@@ -48,7 +48,7 @@
                       <br>
                       <input type="text" name="town[mayor]" placeholder="Enter town mayor...">
                       <br>
-                      <button>Create</button>
+                      <button class="cute-btn inner-modal-btn">Create</button>
                     </form>
                   </div>
                 </div>
@@ -73,27 +73,38 @@
                 <div class="modal-body">
                 <!-- Show / Delete Town -->
                   <form id="show-one-town">
-                    <h5>Search for a town</h5>
-                    <input type="text" name="townId" placeholder="Enter town Id...">
-                    <button>Search</button>
+                    <h6>Search for a town</h6>
+                    <input class="input" type="text" name="townId" placeholder="Enter town Id...">
+                    <button class="cute-btn inner-modal-btn">Search</button>
                   </form>
-                  <div class="show-single-town"></div>
+                  <div class="show-single-town">
+                  </div>
                   <br>
                   <!-- Update Town -->
+                  <div class="update">
+                  <h4 id="message2"></h4>
                   <form id="update-town">
                     <h6>Make a change?</h6>
-                    <input class="town-id" type="text" name="town[id]" placeholder="Enter Town Id...">
-                    <input id="town-name" type="text" name="town[name]" placeholder="New Name..."/>
-                    <input id="town-fruit" type="text" name="town[town_fruit]" placeholder="New Fruit..."/>
-                    <input id="town-mayor" type="text" name="town[mayor]" placeholder="New Mayor..."/>
-                    <button type="submit" class="btn btn-danger" data-id="{{town.id}}">Edit</button>
+                    <input class="town-id input" type="text" name="town[id]" placeholder="Enter Town Id...">
+                    <input class="input" id="town-name" type="text" name="town[name]" placeholder="New Name..."/>
+                    <input class="input" id="town-fruit" type="text" name="town[town_fruit]" placeholder="New Fruit..."/>
+                    <input class="input" id="town-mayor" type="text" name="town[mayor]" placeholder="New Mayor..."/>
+                    <button type="submit" class="cute-btn inner-modal-btn" data-id="{{town.id}}">Edit</button>
                   </form>
+                  <br>
+                </div>
                   <!-- Delete Town -->
+                  <div class="delete">
+                  <h4 id="message2"></h4>
                   <form id="delete-town">
-                    <input id="delete" type="number" name="town[id]" placeholder="Confirm Town Id...">
-                    <input class="btn btn-danger" type="submit" value="Delete Town" />
+                    <h4 id="message2"></h4>
+                    <h6>Remove a town?</h6>
+                    <input class="input" id="delete" type="number" name="town[id]" placeholder="Confirm Town Id...">
+                    <input class="cute-btn inner-modal-btn" type="submit" value="Delete Town" />
                     <!-- <button type="submit" class="btn btn-danger" data-id="{{town.id}}">Delete Town :(</button> -->
                   </form>
+                  <br>
+                </div>
                   <!-- Show all Towns -->
                   <div class="show-all-towns overflow-auto"></div>
                 </div>
@@ -117,6 +128,7 @@
                 </div>
                 <div class="modal-body">
                   <div class="change-password">
+                    <h4 id="message "></h4>
                     <form id="change-password">
                       <h6>Enter Old Password:</h6>
                       <input type="password" name="passwords[old]" placeholder="Enter old password...">
@@ -126,7 +138,7 @@
                       <input type="password" name="passwords[new]" placeholder="Enter new password...">
                       <br>
                       <br>
-                      <button>Submit</button>
+                      <button class="cute-btn inner-modal-btn">Submit</button>
                     </form>
                   </div>
                 </div>
@@ -197,7 +209,6 @@
             </form>
             <button id="create-res-btn">Create Residents</button>
           </div> -->
-          <!-- <button id="back">Back</button> -->
       </div>
     </div>
   </div>

@@ -16,7 +16,9 @@ $(() => {
   $('#create-town').on('submit', resourceEvents.onCreateTown)
   $('#index-towns').on('click', resourceEvents.onIndexTowns)
   $('#show-one-town').on('submit', resourceEvents.onShowTown)
+  $('.update').hide()
   $('#update-town').on('submit', resourceEvents.onUpdateTown)
+  $('.delete').hide()
   $('#delete-town').on('submit', resourceEvents.onDeleteTown)
   // EXTRAS
   $('#rosie').hide()
