@@ -4,8 +4,8 @@ My Animal Crossing Town Builder is a single page application that utilized an AP
 
 # Link to live game!
 
--[Animal Crossing Town Builder](https://sangelici.github.io/AC-Town-Builder-Client/)
--[Animal Crossing Town Builder: Heroku API](https://salty-scrubland-96340.herokuapp.com/)
+- [Animal Crossing Town Builder](https://sangelici.github.io/AC-Town-Builder-Client/)
+- [Animal Crossing Town Builder: Heroku API](https://salty-scrubland-96340.herokuapp.com/)
 
 # Link to API repository
 
@@ -37,28 +37,28 @@ Note: I did not reach the point of implementing the front-end functionality for 
 
 # Technologies Used
 
-  -HTML
-  -CSS
-  -Sass
-  -Bootstraps
-  -Handlebars
-  -JavaScript
-  -jQuery
-  -Ajax
-  -Curl/API
-  -RESTful API
-  -Ruby
-  -Ruby on Rail
+  - HTML
+  - CSS
+  - Sass
+  - Bootstraps
+  - Handlebars
+  - JavaScript
+  - jQuery
+  - Ajax
+  - Curl/API
+  - RESTful API
+  - Ruby
+  - Ruby on Rail
 
 # Future Goals
-  -Add variables to the index.scss file to refactor
-  -Add in front-end functionality for the Resident resource table
-      -Full CRUD functionality
-      -To stay true to the game, remove PATCH from Towns resource
-  -Add in the 'open cirle' animation when transitioning to a new view (think Loony Toons 'Fin' animation)
-  -Remove overflow from corners of browser where the background extends passed the border
-  -Incorporate a real time clock that adjusts to user location
-  -Incorporate a weather api and adjust 2nd view background to real time weather (staying true to the game, also a big stretch goal!)
+  - Add variables to the index.scss file to refactor
+  - Add in front-end functionality for the Resident resource table
+      - Full CRUD functionality
+      - To stay true to the game, remove PATCH from Towns resource
+  - Add in the 'open cirle' animation when transitioning to a new view (think Loony Toons 'Fin' animation)
+  - Remove overflow from corners of browser where the background extends passed the border
+  - Incorporate a real time clock that adjusts to user location
+  - Incorporate a weather api and adjust 2nd view background to real time weather (staying true to the game, also a big stretch goal!)
 
 # ERD + Wireframe:
 
