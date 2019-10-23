@@ -2,7 +2,7 @@
 
 My Animal Crossing Town Builder is a single page application that utilized an API. The user can sign up and sign in with a unique email and password, and build a town with their own unique attributes! This application was inspired by Nindendo's Animal Crossing franchise. Newly created towns are stored within the database and the user can retrieve, edit, and remove any of the data under their account. This application was build within 4 business days (with a weekend to break it up).
 
-# Link to live game!
+# Link to live site!
 
 - [Animal Crossing Town Builder](https://sangelici.github.io/AC-Town-Builder-Client/)
 - [Animal Crossing Town Builder: Heroku API](https://salty-scrubland-96340.herokuapp.com/)
