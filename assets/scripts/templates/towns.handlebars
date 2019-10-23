@@ -1,9 +1,8 @@
 {{#each  towns as |town|}}
   {{log town}}
   <section data-id="{{town.id}}">
-    <h3>
-      {{town.name}}
-    </h3>
+    <h5>Id: {{town.id}}</h5>
+    <h6>{{town.name}}</h6>
     <p>
       <h6>Town Fruit:</h6>
       {{town.town_fruit}}
