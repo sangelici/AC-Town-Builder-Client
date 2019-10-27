@@ -5,16 +5,18 @@
 const store = require('../store.js')
 
 const successMessage = function (newText) {
-  $('#message').text(newText)
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
+  $('.message').text(newText)
+  $('.message').removeClass('failure')
+  $('.message').addClass('success')
   $('form').trigger('reset')
+  setTimeout(function () { failureMessage('') }, 4000)
 }
 
 const failureMessage = function (newText) {
-  $('#message').text(newText)
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
+  $('.message').text(newText)
+  $('.message').removeClass('success')
+  $('.message').addClass('failure')
+  setTimeout(function () { failureMessage('') }, 4000)
 }
 
 const onSignUpSuccess = function () {
@@ -32,12 +34,6 @@ const onSignInSuccess = function (responseData) {
   $('.box2').css('height', '64vh')
   $('.form').hide()
   $('nav').show()
-  $('#kk-slider').hide()
-  $('#boy-villager').hide()
-  $('#girl-villager').hide()
-  $('#tree').hide()
-  $('#balloon').hide()
-  $('.signature').hide()
   cssSecondPage()
 }
 
@@ -47,35 +43,37 @@ const onSignInFailure = function () {
 
 const onChangePasswordSuccess = function () {
   successMessage('Password updated!')
-  $('#message').show()
+  $('.message').show()
 }
 
 const onChangePasswordFailure = function () {
   failureMessage(`Entry failed, Please try again!`)
-  $('#message').show()
+  $('.message').show()
 }
 
 const onSignOutSuccess = function () {
   successMessage(`Goodbye! Come back soon!`)
   $('.form').show()
   $('nav').hide()
-  $('#tom-nook').hide()
-  $('#kk-slider').show()
-  $('#boy-villager').show()
-  $('#girl-villager').show()
-  $('#tree').show()
-  $('#balloon').show()
-  $('.signature').show()
-  cssFirstPage()
+  cssLastPage()
 }
 
 const onSignOutFailure = function () {
   failureMessage(`Sign out failed. Please try again!`)
 }
 
-const cssFirstPage = function () {
+const cssLastPage = function () {
+  $('.buttons').hide()
+  $('.create').hide()
+  $('.show').hide()
   $('#rosie').hide()
   $('#kicks').hide()
+  $('#kk-slider').show()
+  $('#boy-villager').show()
+  $('#girl-villager').show()
+  $('#tree').show()
+  $('#balloon').show()
+  $('.signature').show()
   $('.main-header').text('Animal Crossing Town Builder').css('font-size', '3em')
   $('body').css('background', 'url(public/background.jpg)').css('border', '20px solid #ffffe0')
   $('.box1').css('background-color', '#fff7e0').css('border', '10px solid #ffee97')
@@ -84,10 +82,19 @@ const cssFirstPage = function () {
 }
 
 const cssSecondPage = function () {
+  $('.buttons').show()
+  $('.create').show()
+  $('.show').show()
+  $('.signature').hide()
   $('#tom-nook').hide()
   $('#gyroid').hide()
   $('#rosie').show()
   $('#kicks').show()
+  $('#kk-slider').hide()
+  $('#boy-villager').hide()
+  $('#girl-villager').hide()
+  $('#tree').hide()
+  $('#balloon').hide()
   $('body').css('background', 'url(public/background2.png)').css('border', '20px solid #4b78e3')
   $('.box1').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
   $('.box2').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
