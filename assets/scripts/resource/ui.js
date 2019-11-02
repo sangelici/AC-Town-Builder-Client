@@ -11,14 +11,14 @@ const successMessage = function (newText) {
   $('.message').removeClass('failure')
   $('.message').addClass('success')
   $('form').trigger('reset')
-  setTimeout(function () { failureMessage('') }, 5000)
+  setTimeout(function () { failureMessage('') }, 6000)
 }
 
 const failureMessage = function (newText) {
   $('.message').text(newText)
   $('.message').removeClass('success')
   $('.message').addClass('failure')
-  setTimeout(function () { failureMessage('') }, 5000)
+  setTimeout(function () { failureMessage('') }, 6000)
 }
 
 // TOWNS
@@ -34,8 +34,10 @@ const onCreateTownFailure = function () {
 const onIndexTownSuccess = function (townData) {
   $('.show-all-towns').html(``)
   $('.show-all-towns').append(allTownsHandlebar({towns: townData.towns}))
-  $('.update').hide()
-  $('.delete').hide()
+  // $('.update').hide()
+  // $('.delete').hide()
+  $('.create').hide()
+  $('.show').hide()
 }
 
 const onIndexTownFailure = function () {

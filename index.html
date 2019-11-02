@@ -37,7 +37,7 @@
         <nav class="navbar">
 
 <!-- Change Password Modal -->
-          <button type="button" class="cute-btn" data-toggle="modal" data-target="#change-pwd">
+          <button type="button" class="cute-btn nav-btn" data-toggle="modal" data-target="#change-pwd">
             Change Password
           </button>
 <!-- Modal -->
@@ -71,7 +71,7 @@
 
           <div class="sign-out">
             <form id="sign-out">
-              <button class="cute-btn">Sign Out</button>
+              <button class="cute-btn nav-btn">Sign Out</button>
             </form>
           </div>
         </nav>
@@ -110,12 +110,23 @@
 
 <!-- CRUD BUTTONS -->
         <div class="buttons">
+
+          <!-- <button class="cute-btn edit-btn show-one-town">
+            Edit A Town
+          </button> -->
+
+          <button class="cute-btn show-btn show-one-town">
+            Find A Town
+          </button>
+
           <button class="cute-btn view-btn" id="index-towns">
             View Towns
           </button>
+
           <button class="cute-btn create-btn">
             Create Town
           </button>
+
         </div>
 
 <!-- CREATE A TOWN FORM -->
@@ -134,17 +145,14 @@
 
 <!-- Show Towns -->
         <div class="show">
-          <h5>Your Towns!</h5>
+          <form class="show-one-town">
+            <h6>Search for a town</h6>
+            <input class="input" type="text" name="townId" placeholder="Enter town id...">
+            <button class="cute-btn search">SEARCH</button>
+          </form>
+          <div class="show-single-town"></div>
+        </div>
 
-<!-- Show Town -->
-            <form id="show-one-town">
-              <h6>Search for a town</h6>
-              <input class="input" type="text" name="townId" placeholder="Enter town id...">
-              <button class="cute-btn search">SEARCH</button>
-            </form>
-
-            <div class="show-single-town"></div>
-            <br>
 <!-- Update Town -->
           <div class="update">
             <form id="update-town">
@@ -153,22 +161,24 @@
               <input class="input" id="town-name" type="text" name="town[name]" placeholder="New Name..."/>
               <input class="input" id="town-fruit" type="text" name="town[town_fruit]" placeholder="New Fruit..."/>
               <input class="input" id="town-mayor" type="text" name="town[mayor]" placeholder="New Mayor..."/>
-              <button type="submit" class="cute-btn inner-modal-btn" data-id="{{town.id}}">Edit</button>
+              <button type="submit" class="cute-btn inner-modal-btn update-btn" data-id="{{town.id}}">Update</button>
             </form>
             <br>
           </div>
+
 <!-- Delete Town -->
           <div class="delete">
             <form id="delete-town">
               <h6>Remove a town?</h6>
               <input class="input" id="delete" type="number" name="town[id]" placeholder="Confirm Town Id...">
-              <input class="cute-btn inner-modal-btn" type="submit" value="Delete Town" />
+              <input class="cute-btn inner-modal-btn delete-btn" type="submit" value="Delete" />
             </form>
             <br>
           </div>
-<!-- Show all Towns -->
+
+<!-- HANDLEBARS INDEX -->
           <div class="show-all-towns overflow-auto"></div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -176,9 +186,11 @@
         <!-- Resources -->
         <!-- Create/View Town/Residents -->
           <!-- Create Residents -->
-          <!-- <div class="create-res-form">
+          <!-- <div class="create-res-f
+          ">
             <h3>Create a Resident:</h3>
-            <form id="create-res">
+            <f
+             id="create-res">
               <input type="text" name="resident[name]" placeholder="Enter name...">
               <input type="text" name="resident[animal_type]" placeholder="Enter animal type...">
               <input type="date" name="resident[birthday]" placeholder="Enter birthday...">
@@ -194,7 +206,8 @@
                   <button>Create</button>
                 </div>
               </div>
-            </form>
+            </f
+            >
             <button id="create-res-btn">Create Residents</button>
           </div> -->
 </body>

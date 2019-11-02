@@ -83,8 +83,8 @@ const cssLastPage = function () {
 
 const cssSecondPage = function () {
   $('.buttons').show()
-  $('.create').show()
-  $('.show').show()
+  // $('.create').show()
+  // $('.show').show()
   $('.signature').hide()
   $('#tom-nook').hide()
   $('#gyroid').hide()

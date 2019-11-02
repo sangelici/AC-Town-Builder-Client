@@ -102,7 +102,7 @@ img {
 
 nav {
   flex-wrap: wrap-reverse;
-  height: 60px;
+  height: 40px;
 }
 
 section{
@@ -160,6 +160,12 @@ section{
   &.sign {
     margin-top: 6px;
   }
+}
+
+.delete-btn {
+  padding: 1px 6px;
+  margin-top: -3px;
+  margin-left: 5px;
 }
 
 .form {
@@ -220,6 +226,12 @@ section{
   background-size: 30px 30px;
 }
 
+.nav-btn {
+  padding: 1px 6px;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
 .row {
   align-content: center;
   display: flex;
@@ -237,12 +249,21 @@ section{
   display: block;
   height: 45vh;
   justify-content: center;
+  width: 50vh;
 }
 
 .signature {
   font-size: 10px;
   margin: 0;
 }
+
+.update-btn {
+  padding: 1px 6px;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
+
 
 #message2 {
   font-size: 10px;

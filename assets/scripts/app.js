@@ -20,15 +20,36 @@ $(() => {
   $('nav').hide()
   // RESOURCE jQuery
   $('.buttons').hide()
-  $('#back').on('click', resourceEvents.onMainPage)
+  // $('#back').on('click', resourceEvents.onMainPage)
+
+  // CREATE EVENT LISTENERS
   $('.create').hide()
-  $('.create-town').on('submit', resourceEvents.onCreateTown)
-  $('.show').hide()
+  $('.create-btn').on('click', () => {
+    $('.create').show()
+    $('.show-all-towns').hide()
+    $('.show').hide()
+    $('.create-town').on('submit', resourceEvents.onCreateTown)
+  })
+  // INDEX EVENT LISTENER
   $('#index-towns').on('click', resourceEvents.onIndexTowns)
-  $('#show-one-town').on('submit', resourceEvents.onShowTown)
+
+  // SHOW EVENT LISTENERS
+  $('.show').hide()
+  $('.show-btn').on('click', () => {
+    $('.show').show()
+    $('.create').hide()
+    $('.show-all-towns').hide()
+    $('.show-one-town').on('submit', resourceEvents.onShowTown)
+  })
+  // EDIT EVENT LISTENERS
   $('.update').hide()
-  $('#update-town').on('submit', resourceEvents.onUpdateTown)
   $('.delete').hide()
+  $('.edit-btn').on('click', () => {
+    $('.update').show()
+    $('.delete').show()
+  })
+  $('#update-town').on('submit', resourceEvents.onUpdateTown)
   $('#delete-town').on('submit', resourceEvents.onDeleteTown)
+
   // $('#create-res').on('submit', resourceEvents.onCreateResident)
 })
