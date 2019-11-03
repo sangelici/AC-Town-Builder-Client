@@ -101,7 +101,6 @@ img {
 }
 
 nav {
-  flex-wrap: wrap-reverse;
   height: 40px;
 }
 
@@ -143,11 +142,8 @@ section{
   border-radius: 16px;
   box-shadow: 0px 6px 0px #e8cea2;
   color: #8c7165;
-  padding: 9px 9px;
-  float: right;
   font-size: 15px;
   margin-top: 2px;
-  text-align: center;
 
   &:hover {
     background-color: #ffdcc7;
@@ -160,6 +156,10 @@ section{
   &.sign {
     margin-top: 6px;
   }
+}
+
+.create-btn, .view-btn, .show-one-town{
+  margin: 10px 20px;
 }
 
 .delete-btn {
