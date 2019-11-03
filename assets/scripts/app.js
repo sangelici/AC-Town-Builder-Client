@@ -27,6 +27,7 @@ $(() => {
     $('.create-town').on('submit', resourceEvents.onCreateTown)
   })
   // INDEX EVENT LISTENER
+  $('.show-all-towns').hide()
   $('#index-towns').on('click', resourceEvents.onIndexTowns)
   // SHOW EVENT LISTENERS
   $('.show').hide()

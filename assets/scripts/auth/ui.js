@@ -56,6 +56,7 @@ const onSignOutSuccess = function () {
   $('.form').show()
   $('nav').hide()
   cssLastPage()
+  logInFeatures()
 }
 
 const onSignOutFailure = function () {
@@ -87,6 +88,14 @@ const cssSecondPage = function () {
   $('.box1').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
   $('.box2').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
   $('.cute-btn').css('background-color', '#9cf0cc').css('box-shadow', '0px 6px 0px #64b399')
+}
+
+const logInFeatures = function () {
+  $('.create').hide()
+  $('.show-all-towns').hide()
+  $('.show').hide()
+  $('.update').hide()
+  $('.delete').hide()
 }
 
 module.exports = {

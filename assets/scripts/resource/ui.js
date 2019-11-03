@@ -32,7 +32,6 @@ const onCreateTownFailure = function () {
 }
 
 const onIndexTownSuccess = function (townData) {
-  $('.show-all-towns').html(``)
   $('.create').hide()
   findATownContent()
   const sortedTowns = townData.towns.sort((a, b) => {
@@ -47,7 +46,7 @@ const onIndexTownFailure = function () {
 
 const onShowTownSuccess = function (townData) {
   // console.log(townData)
-  $('.show-single-town').html(``)
+  $('.show-single-town').html('')
   $('.show-single-town').append(townHandlebar({towns: townData}))
   $('.show-all-towns').hide()
   $('.update').show()

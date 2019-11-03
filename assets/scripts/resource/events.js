@@ -20,7 +20,7 @@ const onCreateTown = function (event) {
 const onIndexTowns = function (event) {
   event.preventDefault()
   $('.show-all-towns').show()
-  $('.show-single-town').html(``)
+  $('.show-all-towns').html('')
   api.indexTowns()
     .then(ui.onIndexTownSuccess)
     .catch(ui.onIndexTownFailure)
