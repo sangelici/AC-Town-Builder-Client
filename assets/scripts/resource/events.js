@@ -15,25 +15,21 @@ const onCreateTown = function (event) {
   api.createTown(formData)
     .then(ui.onCreateTownSuccess)
     .catch(ui.onCreateTownFailure)
-  // console.log(formData)
 }
 
 const onIndexTowns = function (event) {
   event.preventDefault()
   $('.show-all-towns').show()
   $('.show-single-town').html(``)
-  // console.log('get all towns!')
   api.indexTowns()
     .then(ui.onIndexTownSuccess)
     .catch(ui.onIndexTownFailure)
-  // console.log(api.indexTowns())
 }
 
 const onShowTown = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  // console.log(formData)
   api.showTown(formData.townId)
     .then(ui.onShowTownSuccess)
     .catch(ui.onShowTownFailure)
@@ -51,12 +47,8 @@ const onUpdateTown = function (event) {
 }
 
 const onDeleteTown = event => {
-  // console.log('hello')
   event.preventDefault()
-  // const form = event.target
-  // const formData = getFormFields(form)
   const id = $('#delete').val()
-  // console.log(id)
   api.deleteTown(id)
     .then(ui.onDeleteTownSuccess)
     .catch(ui.onDeleteTownFailure)

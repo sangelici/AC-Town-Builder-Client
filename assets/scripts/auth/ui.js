@@ -66,13 +66,9 @@ const cssLastPage = function () {
   $('.buttons').hide()
   $('.create').hide()
   $('.show').hide()
-  $('#rosie').hide()
-  $('#kicks').hide()
-  $('#kk-slider').show()
-  $('#boy-villager').show()
-  $('#girl-villager').show()
-  $('#tree').show()
-  $('#balloon').show()
+  $('.page-one').hide()
+  $('.page-two').hide()
+  $('.page-three').show()
   $('.signature').show()
   $('.main-header').text('Animal Crossing Town Builder').css('font-size', '3em')
   $('body').css('background', 'url(public/background.jpg)').css('border', '20px solid #ffffe0')
@@ -83,26 +79,15 @@ const cssLastPage = function () {
 
 const cssSecondPage = function () {
   $('.buttons').show()
-  // $('.create').show()
-  // $('.show').show()
   $('.signature').hide()
-  $('#tom-nook').hide()
-  $('#gyroid').hide()
-  $('#rosie').show()
-  $('#kicks').show()
-  $('#kk-slider').hide()
-  $('#boy-villager').hide()
-  $('#girl-villager').hide()
-  $('#tree').hide()
-  $('#balloon').hide()
+  $('.page-one').hide()
+  $('.page-two').show()
+  $('.page-three').hide()
   $('body').css('background', 'url(public/background2.png)').css('border', '20px solid #4b78e3')
   $('.box1').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
   $('.box2').css('background-color', '#cbc2ed').css('border', '10px solid #a38dd6')
   $('.cute-btn').css('background-color', '#9cf0cc').css('box-shadow', '0px 6px 0px #64b399')
 }
-
-// Polka dot background
-// .css('background-image', 'radial-gradient(#bcaed9 20%, transparent 0),radial-gradient(#bcaed9 20%, transparent 0)').css('background-size', '30px 30px').css('background-position', '0 0, 15px 15px')
 
 module.exports = {
   onSignUpSuccess,

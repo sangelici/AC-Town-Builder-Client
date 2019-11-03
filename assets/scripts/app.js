@@ -5,13 +5,9 @@ const resourceEvents = require('./resource/events.js')
 
 $(() => {
   // Images
-  $('#rosie').hide()
-  $('#kicks').hide()
-  $('#kk-slider').hide()
-  $('#boy-villager').hide()
-  $('#girl-villager').hide()
-  $('#tree').hide()
-  $('#balloon').hide()
+  $('.page-one').show()
+  $('.page-two').hide()
+  $('.page-three').hide()
   // AUTH jQuery
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -20,8 +16,6 @@ $(() => {
   $('nav').hide()
   // RESOURCE jQuery
   $('.buttons').hide()
-  // $('#back').on('click', resourceEvents.onMainPage)
-
   // CREATE EVENT LISTENERS
   $('.create').hide()
   $('.create-btn').on('click', () => {
@@ -34,7 +28,6 @@ $(() => {
   })
   // INDEX EVENT LISTENER
   $('#index-towns').on('click', resourceEvents.onIndexTowns)
-
   // SHOW EVENT LISTENERS
   $('.show').hide()
   $('.show-btn').on('click', () => {
