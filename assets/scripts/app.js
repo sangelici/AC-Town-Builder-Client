@@ -28,6 +28,8 @@ $(() => {
     $('.create').show()
     $('.show-all-towns').hide()
     $('.show').hide()
+    $('.update').hide()
+    $('.delete').hide()
     $('.create-town').on('submit', resourceEvents.onCreateTown)
   })
   // INDEX EVENT LISTENER

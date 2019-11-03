@@ -34,7 +34,7 @@ const onCreateTownFailure = function () {
 const onIndexTownSuccess = function (townData) {
   $('.show-all-towns').html(``)
   $('.create').hide()
-  $('.show').hide()
+  findATownContent()
   const sortedTowns = townData.towns.sort((a, b) => {
     return a.id - b.id
   })
@@ -91,6 +91,12 @@ const onDeleteTownFailure = function (townData) {
 // const onCreateResidentFailure = function () {
 //   failureMessage(`Please try again!`)
 // }
+
+const findATownContent = function () {
+  $('.show').hide()
+  $('.update').hide()
+  $('.delete').hide()
+}
 
 module.exports = {
   onCreateTownSuccess,
