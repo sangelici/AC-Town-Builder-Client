@@ -24,8 +24,8 @@ $(() => {
     $('.show').hide()
     $('.update').hide()
     $('.delete').hide()
-    $('.create-town').on('submit', resourceEvents.onCreateTown)
   })
+  $('.create-town').on('submit', resourceEvents.onCreateTown)
   // INDEX EVENT LISTENER
   $('.show-all-towns').hide()
   $('#index-towns').on('click', resourceEvents.onIndexTowns)
@@ -35,8 +35,8 @@ $(() => {
     $('.show').show()
     $('.create').hide()
     $('.show-all-towns').hide()
-    $('.show-one-town').on('submit', resourceEvents.onShowTown)
   })
+  $('.show-one-town').on('submit', resourceEvents.onShowTown)
   // EDIT EVENT LISTENERS
   $('.update').hide()
   $('.delete').hide()
