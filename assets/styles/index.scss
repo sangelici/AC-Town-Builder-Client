@@ -34,69 +34,75 @@ html {
   width: 100%;
 }
 
-img {
-  &#balloon {
-    height: 35%;
-    margin-left: 5%;
-    margin-top: 5%;
-    position: absolute;
+.neighbors {
+  &.page-1 {
+    &.gyroid {
+      height: 28%;
+      margin-left: 76%;
+      margin-top: 34.5%;
+      position: absolute;
+    }
+
+    &.tom-nook {
+      height: 50%;
+      margin-left: 7%;
+      margin-top: 23%;
+      position: absolute;
+    }
   }
 
-  &#boy-villager {
-    height: 50%;
-    margin-left: 8%;
-    margin-top: 22.5%;
-    position: absolute;
+  &.page-2 {
+    &.kicks {
+      height: 45%;
+      margin-left: 1%;
+      margin-top: 25%;
+      position: absolute;
+    }
+
+    &.rosie {
+      height: 50%;
+      margin-left: 75%;
+      margin-top: 22.5%;
+      position: absolute;
+    }
   }
 
-  &#girl-villager {
-    height: 50%;
-    margin-left: 73%;
-    margin-top: 22.5%;
-    position: absolute;
-  }
+  &.page-3 {
+    &.balloon {
+      height: 35%;
+      margin-left: 5%;
+      margin-top: 5%;
+      position: absolute;
+    }
 
-  &#gyroid {
-    height: 28%;
-    margin-left: 76%;
-    margin-top: 34.5%;
-    position: absolute;
-  }
+    &.boy-villager {
+      height: 50%;
+      margin-left: 8%;
+      margin-top: 22.5%;
+      position: absolute;
+    }
 
-  &#kicks {
-    height: 45%;
-    margin-left: 1%;
-    margin-top: 25%;
-    position: absolute;
-  }
+    &.girl-villager {
+      height: 50%;
+      margin-left: 73%;
+      margin-top: 22.5%;
+      position: absolute;
+    }
 
-  &#kk-slider {
-    height: 45%;
-    margin-left: -5%;
-    margin-top: 26%;
-    position: absolute;
-  }
+    &.kk-slider {
+      height: 45%;
+      margin-left: -5%;
+      margin-top: 26%;
+      position: absolute;
+    }
 
-  &#rosie {
-    height: 50%;
-    margin-left: 75%;
-    margin-top: 22.5%;
-    position: absolute;
-  }
-
-  &#tom-nook {
-    height: 50%;
-    margin-left: 7%;
-    margin-top: 23%;
-    position: absolute;
-  }
-
-  &#tree {
-    height: 600px;
-    width: 375px;
-    margin-left: 72%;
-    margin-top: 10%;
-    position: absolute;
+    &.tree {
+      height: 600px;
+      margin-left: 72%;
+      margin-top: 10%;
+      position: absolute;
+      width: 375px;
+    }
   }
 }
 
@@ -105,8 +111,8 @@ nav {
 }
 
 section{
-  line-height: 1;
   display: inherit;
+  line-height: 1;
 }
 
 .box1 {
@@ -150,22 +156,24 @@ section{
     box-shadow: 0px 6px 0px #ffba8f;
   }
 
-  &.inner-modal-btn{
-  }
+  // &.inner-modal-btn{
+  // }
 
   &.sign {
     margin-top: 6px;
   }
 }
 
-.create-btn, .view-btn, .show-one-town{
+.create-btn,
+.view-btn,
+.show-one-town {
   margin: 10px 20px;
 }
 
 .delete-btn {
-  padding: 1px 6px;
-  margin-top: -3px;
   margin-left: 5px;
+  margin-top: -3px;
+  padding: 1px 6px;
 }
 
 .form {
@@ -198,8 +206,8 @@ section{
 .message {
   background-color: white;
   font-size: 15px;
-  position: absolute;
   margin-left: 1%;
+  position: absolute;
 }
 
 .modal-content {
@@ -226,9 +234,9 @@ section{
 }
 
 .nav-btn {
-  padding: 1px 6px;
-  margin-top: -3px;
   margin-left: 5px;
+  margin-top: -3px;
+  padding: 1px 6px;
 }
 
 .row {
@@ -238,9 +246,9 @@ section{
 }
 
 .search {
-  padding: 1px 3px;
-  margin-top: -3px;
   margin-left: 5px;
+  margin-top: -3px;
+  padding: 1px 3px;
 }
 
 .show-all-towns {
@@ -257,12 +265,10 @@ section{
 }
 
 .update-btn {
-  padding: 1px 6px;
-  margin-top: -3px;
   margin-left: 5px;
+  margin-top: -3px;
+  padding: 1px 6px;
 }
-
-
 
 #message2 {
   font-size: 10px;
