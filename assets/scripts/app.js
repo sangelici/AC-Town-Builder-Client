@@ -4,10 +4,6 @@ const authEvents = require('./auth/events.js')
 const resourceEvents = require('./resource/events.js')
 
 $(() => {
-  // Images
-  $('.page-one').show()
-  $('.page-two').hide()
-  $('.page-three').hide()
   // AUTH jQuery
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
