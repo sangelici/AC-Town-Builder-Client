@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AC Town Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <!-- succes and failure message (top left-hand corner) -->
+  <h4 class="message"></h4>
+
+<!-- BOOTSTRAPS -->
+  <div class="container">
+    <div class="row">
+      <div class="col-8 box1">
+        <h1 class="main-header">Animal Crossing Town Builder</h1>
+      </div>
+
+      <div class="col-8">
+<!-- Navigation Bar -->
+        <nav class="navbar">
+
+<!-- Change Password Modal -->
+          <button type="button" class="cute-btn nav-btn" data-toggle="modal" data-target="#change-pwd">
+            Change Password
+          </button>
+<!-- Modal -->
+          <div class="modal fade" id="change-pwd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Update Your Password!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="change-password">
+                    <form id="change-password">
+                      <h6>Enter Old Password:</h6>
+                      <input type="password" name="passwords[old]" placeholder="Enter old password...">
+                      <br>
+                      <br>
+                      <h6>Enter New Password:</h6>
+                      <input type="password" name="passwords[new]" placeholder="Enter new password...">
+                      <br>
+                      <br>
+                      <button class="cute-btn inner-modal-btn">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sign-out">
+            <form id="sign-out">
+              <button class="cute-btn nav-btn">Sign Out</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+
+<!-- Main Box -->
+      <div class="col-8 box2">
+<!-- Sign-Up/Sign-in Input Fields -->
+        <div class="form">
+          <div class="sign-up">
+            <h3>Sign Up!</h3>
+            <form id="sign-up">
+              <input type="email" name="credentials[email]" placeholder="Enter email...">
+              <br>
+              <input type="password" name="credentials[password]" placeholder="Enter password...">
+              <br>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password...">
+              <br>
+              <button class="cute-btn sign">Sign Up</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="form">
+          <div class="sign-in">
+            <h3>Sign-In!</h3>
+            <form id="sign-in">
+              <input type="email" name="credentials[email]" placeholder="Enter email...">
+              <input type="password" name="credentials[password]" placeholder="Enter password...">
+              <button class="cute-btn sign">Sign In</button>
+            </form>
+          </div>
+        </div>
+
+        <p class="signature">Created by: Sarah Angelici</p>
+
+<!-- CRUD BUTTONS -->
+        <div class="buttons">
+
+          <button class="cute-btn create-btn">
+            Create Town
+          </button>
+
+          <button class="cute-btn view-btn" id="index-towns">
+            View Towns
+          </button>
+
+          <button class="cute-btn show-btn show-one-town">
+            Find A Town
+          </button>
+
+        </div>
+
+<!-- CREATE A TOWN FORM -->
+        <div class="create">
+          <h5>Build A Town!</h5>
+          <form class="create-town">
+            <input type="text" name="town[name]" placeholder="Enter town name...">
+            <br>
+            <input type="text" name="town[town_fruit]" placeholder="Enter town fruit...">
+            <br>
+            <input type="text" name="town[mayor]" placeholder="Enter town mayor...">
+            <br>
+            <button class="cute-btn inner-modal-btn">Create</button>
+          </form>
+        </div>
+
+<!-- Show Towns -->
+        <div class="show">
+          <form class="show-one-town">
+            <h6>Search for a town</h6>
+            <input class="input" type="text" name="townId" placeholder="Enter town id...">
+            <button class="cute-btn search">SEARCH</button>
+          </form>
+          <div class="show-single-town"></div>
+        </div>
+
+<!-- Update Town -->
+          <div class="update">
+            <form id="update-town">
+              <h6>Make a change?</h6>
+              <input class="town-id input" type="text" name="town[id]" placeholder="Enter Town Id...">
+              <input class="input" id="town-name" type="text" name="town[name]" placeholder="New Name..."/>
+              <input class="input" id="town-fruit" type="text" name="town[town_fruit]" placeholder="New Fruit..."/>
+              <input class="input" id="town-mayor" type="text" name="town[mayor]" placeholder="New Mayor..."/>
+              <button type="submit" class="cute-btn inner-modal-btn update-btn" data-id="{{town.id}}">Update</button>
+            </form>
+            <br>
+          </div>
+
+<!-- Delete Town -->
+          <div class="delete">
+            <form id="delete-town">
+              <h6>Remove town?</h6>
+              <input class="input" id="delete" type="number" name="town[id]" placeholder="Confirm Town Id...">
+              <input class="cute-btn inner-modal-btn delete-btn" type="submit" value="Delete" />
+            </form>
+            <br>
+          </div>
+
+<!-- HANDLEBARS INDEX -->
+          <div class="show-all-towns overflow-auto"></div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Resources -->
+  <!-- Create/View Town/Residents -->
+    <!-- Create Residents -->
+    <!-- <div class="create-res-f
+    ">
+      <h3>Create a Resident:</h3>
+      <f
+       id="create-res">
+        <input type="text" name="resident[name]" placeholder="Enter name...">
+        <input type="text" name="resident[animal_type]" placeholder="Enter animal type...">
+        <input type="date" name="resident[birthday]" placeholder="Enter birthday...">
+        <input type="text" name="resident[hobby]" placeholder="Enter hobby...">
+        <div class="input-group">
+          <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+            <option selected>Choose Town...</option>
+            <option value="1">Town 1</option>
+            <option value="2">Town 2</option>
+            <option value="3">Town 3</option>
+          </select>
+          <div class="input-group-append">
+            <button>Create</button>
+          </div>
+        </div>
+      </f
+      >
+      <button id="create-res-btn">Create Residents</button>
+    </div> -->
+</body>
+
+</html>
